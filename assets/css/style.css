@@ -1,0 +1,23 @@
+body{
+    font-family: 'Shantell Sans', sans-serif;
+}
+
+.navbar-custom {
+    background-color: #5F7039;
+    
+}
+
+.navbar-custom a{
+    color: white;
+}
+
+.btn{
+    border: none;
+    background-color: #5F7039;
+}
+
+.card .btn:hover{
+    background-color: #4f5f2e;
+    transform: none;
+    transform: scale(1.1);
+}

@@ -1,6 +1,6 @@
 body{
     font-family: 'Edu SA Beginner', sans-serif;
-    font-weight: 300;
+    font-size: x-large;
 }
 
 .navbar-custom {
@@ -21,4 +21,18 @@ body{
     background-color: #4f5f2e;
     transform: none;
     transform: scale(1.1);
+}
+
+.btn{
+    color: white;
+}
+
+.btn:hover{
+    background-color: #4f5f2e;
+    color: white;
+}
+
+.btn:active:focus{
+    color: white;
+    background-color: #323c1d;
 }

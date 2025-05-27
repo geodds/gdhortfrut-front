@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     <td>${cliente.nome}</td>
                     <td>${cliente.cpf}</td>
                     <td>${cliente.telefone}</td>
+                    <td>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn">Alterar</button>
+                            <button type="button" class="btn">Remover</button>
+                        </div>
+                    </td>
                 </tr>`;
                 tabela.innerHTML += linha;
             });

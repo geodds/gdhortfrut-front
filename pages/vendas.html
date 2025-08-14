@@ -26,13 +26,14 @@
     <div class="m-3 mt-4"> 
         <div class="d-flex justify-content-between align-items-center m-3">
             <h2 cl>Lista de vendas</h2>
-            <button class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modalCadastro">Nova Venda</button>
+            <button class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modalCadastro" id="btnNovaVenda">Nova Venda</button>
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">CLIENTE</th>
                     <th scope="col">PRODUTO</th>
                     <th scope="col">QUANTIDADE</th>
                     <th scope="col">VALOR TOTAL</th>
@@ -52,14 +53,21 @@
         <div class="modal-content">
         <div class="modal-header">
             <h1 class="modal-title fs-5" id="modalCadastroLabel">Cadastrar Nova Venda</h1>
-            <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#modalCadastro" id="btnNovaVenda" aria-label="Fechar"></button>
+            <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Fechar"></button>
         </div>
 
         <div class="modal-body ">
 
             <input type="hidden" id="vendaId">
             
-            <form id="formCadastro">
+            <form id="formVenda">
+            <div class="mb-3">
+                <label for="clienteVenda" class="form-label">Cliente</label>
+                <select id="clienteVenda" class="form-select">
+                    <option value="">Selecione um cliente</option>
+                </select>
+            </div>
+
             <div class="mb-3">
                 <label for="produtoId" class="form-label col-8 col-sm-6">Nome do Produto</label>
                 <select class="form-select " id="produtoId"></select>

@@ -24,7 +24,7 @@
     <div class="m-3 mt-4"> 
         <div class="d-flex justify-content-between align-items-center m-3">
             <h2 cl>Lista de Clientes</h2>
-            <button class="btn">Novo Produto</button>
+            <button class="btn btn-lg" id="btnNovoCliente">Novo Cliente</button>
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
@@ -42,6 +42,45 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <!-- Modal -->
+     <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="modalCadastroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalCadastroLabel">Cadastrar Novo Cliente</h1>
+            <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#modalCadastro" id="btnNovoCliente" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body ">
+
+            <input type="hidden" id="clienteId">
+            
+            <form id="formCadastro">
+                <div class="mb-3">
+                    <label for="nomeCliente" class="form-label col-8 col-sm-6">Nome</label>
+                    <input type="text" id="nomeCliente" class="form-control">
+                </div>
+
+                 <div class="mb-3">
+                    <label for="cpfCliente" class="form-label col-8 col-sm-6">Cpf</label>
+                    <input type="number" id="cpfCliente" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="number" id="telefone" class="form-control">
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" id="btnSalvar">Salvar</button>
+        </div>
+        </div>
+    </div>
     </div>
 
     <!--Bootstrap-->

@@ -24,7 +24,7 @@
     <div class="m-3 mt-4"> 
         <div class="d-flex justify-content-between align-items-center m-3">
             <h2 cl>Lista de Produtos</h2>
-            <button class="btn btn-lg">Novo Produto</button>
+            <button class="btn btn-lg" id="btnNovoProduto">Novo Produto</button>
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
@@ -42,6 +42,45 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <!-- Modal -->
+     <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="modalCadastroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalCadastroLabel">Cadastrar Novo Produto</h1>
+            <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#modalCadastro" id="btnNovaVenda" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body ">
+
+            <input type="hidden" id="produtoId">
+            
+            <form id="formCadastro">
+                <div class="mb-3">
+                    <label for="nomeProduto" class="form-label col-8 col-sm-6">Nome</label>
+                    <input type="text" id="nomeProduto" class="form-control">
+                </div>
+
+                 <div class="mb-3">
+                    <label for="nomeProduto" class="form-label col-8 col-sm-6">Descricao</label>
+                    <input type="text" id="descricaoProduto" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="precoProduto" class="form-label">Preço</label>
+                    <input type="number" id="precoProduto" step="0.01" class="form-control">
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" id="btnSalvar">Salvar</button>
+        </div>
+        </div>
+    </div>
     </div>
 
     <!--Bootstrap-->
